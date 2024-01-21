@@ -1,0 +1,129 @@
+.input-rounded {
+    border-radius: 20px !important;
+    box-shadow: 0 0 0 1.5px rgb(90, 90, 90) !important;
+    border: rgb(0, 0, 0) !important;
+}
+
+.input-rounded-icon {
+    border-radius: 0px 20px 20px 0px !important;
+    box-shadow: 0 0 0 0px rgb(90, 90, 90) !important;
+    border-left: 0px solid rgb(0, 0, 0) !important;
+    border-right: 2px solid rgb(0, 0, 0) !important;
+    border-top: 2px solid rgb(0, 0, 0) !important;
+    border-bottom: 2px solid rgb(0, 0, 0) !important;
+}
+
+.input-rounded-icons {
+    border-radius: 0px 0px 0px 0px !important;
+    box-shadow: 0 0 0 0px rgb(90, 90, 90) !important;
+    border-top: 2px solid rgb(0, 0, 0) !important;
+    border-left: 0px solid rgb(0, 0, 0) !important;
+    border-right: 0px solid rgb(0, 0, 0) !important;
+    border-bottom: 2px solid rgb(0, 0, 0) !important;
+}
+
+.input-rounded-icon-left {
+    border-radius: 20px 0px 0px 20px !important;
+    padding-right: 0px !important;
+    box-shadow: 0 0 0 0px rgb(90, 90, 90) !important;
+    border-left: 2px solid rgb(0, 0, 0) !important;
+    border-top: 2px solid rgb(0, 0, 0) !important;
+    border-bottom: 2px solid rgb(0, 0, 0) !important;
+}
+
+.input-rounded-icon-right {
+    border-radius: 0px 20px 20px 0px !important;
+    box-shadow: 0 0 0 0px rgb(90, 90, 90) !important;
+    border-right: 2px solid rgb(0, 0, 0) !important;
+    border-top: 2px solid rgb(0, 0, 0) !important;
+    border-bottom: 2px solid rgb(0, 0, 0) !important;
+}
+
+.input-small {
+    padding: 1px 4px 1px 4px !important;
+    width: 48%;
+}
+
+.input-rounded:focus {
+    box-shadow: 0 0 0 1.5px rgb(0, 0, 0) !important;
+    border: rgb(0, 0, 0) !important;
+}
+
+.input-rounded-suggestion {   
+    margin-top: -25px;
+    padding-top: 15px;
+    border-bottom: 1px solid rgb(90, 90, 90) !important; 
+    border-left:  1px solid rgb(90, 90, 90) !important; 
+    border-right:  1px solid rgb(90, 90, 90) !important; 
+    border-bottom-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+    padding-bottom: 2px;   
+}
+
+.input-suggestion-text { 
+    padding-left: 10px
+}
+
+.form-label { 
+    font-weight: 600 !important;
+}
+
+.input-suggestion-container-text:hover { 
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px !important;
+    margin-left: 5px;
+    margin-right: 5px;   
+}
+
+.btn-rounded {
+    border-radius: 20px !important;
+    box-shadow: 0 0 0 1px rgb(90, 90, 90) !important;
+    border: rgb(0, 0, 0) !important;
+}
+
+.btn-rounded-large {
+    border-radius: 20px !important;
+    box-shadow: 0 0 0 1px rgb(90, 90, 90) !important;
+    border: rgb(0, 0, 0) !important;
+    padding: 2px 50px !important;
+}
+
+.btn-outline-gray {
+    background-color: #D3D3D3 !important;
+    width: 110px;
+    box-shadow: 0 0 0 1px #D3D3D3 !important;
+}
+
+.btn-outline-blue {
+    background-color: #000FCB !important;
+    width: 100% !important;
+    color: white !important;
+    box-shadow: 0 0 0 1px #000FCB !important;
+}
+
+.btn-outline-red {
+    background-color: #DD0000 !important;
+    width: 100% !important;
+    color: white !important;
+    box-shadow: 0 0 0 1px #DD0000 !important;
+}
+
+.btn-outline-gray:hover {
+    background-color: #c3c3c3 !important;
+}
+
+.btn-outline-dark:hover {
+    border: rgb(0, 0, 0) !important;
+    background-color: #e8e8e8 !important;
+    color: black !important
+}
+
+.btn-outline-dark:disabled {
+    border: rgb(0, 0, 0) !important;
+    color: black !important
+}
+
+.width-input-date {
+    max-width: 150px;
+}
+

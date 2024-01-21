@@ -1,0 +1,52 @@
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+    background: #00000080 !important;
+    z-index: 9999;
+  }
+  .ReactModal__Body--open {
+    overflow-y: auto;
+  }
+  .ReactModal__Body--open {
+    overflow: hidden !important;
+  }
+  
+  .modal-header .close {
+    padding: 1rem 1rem;
+    margin: -1rem -1rem -1rem auto;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: #888ea8;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.5;
+    text-transform: none;
+    overflow: visible;
+  }
+  .modal-header .closeclose:not(:disabled):not(.disabled):focus,
+  .close:not(:disabled):not(.disabled):hover {
+    opacity: 0.75;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .modal label {
+    color: #3b3f5c;
+    margin-bottom: 10px;
+  }
+  
+  
+  .message-container {
+    margin-bottom: 0.25rem;
+    text-align: center;
+  }
+  
+  .message-container .help-block {
+    color: #f64e60;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }

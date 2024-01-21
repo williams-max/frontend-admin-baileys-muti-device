@@ -1,0 +1,179 @@
+.calender-main.rbc-calendar {
+    background-color: #fff;
+    border: 2px solid #dbdbdb;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 15px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-box-shadow: 0 0 10px #888888;
+    -webkit-box-shadow: 0 0 10px #888888;
+  }
+  
+  .calender-main .rbc-month-view {
+    border: none;
+  }
+  .calender-main .rbc-month-view .rbc-row.rbc-month-header {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #ffffff;
+    font-weight: bold;
+    border-radius: 25px;
+    margin-bottom: 15px;
+  }
+  .calender-main .rbc-month-view .rbc-row.rbc-month-header .rbc-header {
+    border-bottom: none;
+  }
+  .calender-main
+    .rbc-month-view
+    .rbc-row.rbc-month-header
+    .rbc-header
+    + .rbc-header {
+    border-left: none;
+  }
+  .calender-main .rbc-day-bg + .rbc-day-bg {
+    border-left: none;
+  }
+  .calender-main .rbc-month-row {
+    margin-top: 6px;
+  }
+  .calender-main .rbc-month-row + .rbc-month-row {
+    border-top: none;
+  }
+  
+  /*.calender-main .rbc-day-bg.rbc-today {
+    border-radius: 50px;
+    background-color: black;
+  }*/
+  .calender-main .rbc-date-cell.rbc-now.rbc-current .now-time {
+    color: white;
+  }
+  .calender-main .rbc-month-row:last-of-type {
+    margin-bottom: 15px;
+  }
+  /* .calender-main .rbc-row .rbc-row-segment {
+    display: none;
+  } */
+  
+  .calender-main .rbc-row .rbc-row-segment{
+    display: flex;
+    justify-content:center;
+    margin-top:10px;
+  }
+  .calender-main .rbc-row .rbc-row-segment .rbc-event{
+    background-color: #E11231;
+    width:8px;
+    height:8px;
+    cursor:default;
+  }
+  .calender-main .rbc-day-bg.rbc-off-range-bg {
+    background-color: transparent;
+  }
+  
+  /* //styles of calender detail */
+  .calender-details.rbc-calendar {
+    border: none;
+  }
+  .calender-details .rbc-event {
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px 2px rgb(187, 187, 187);
+  }
+  .calender-details .rbc-time-view {
+    border: none;
+  }
+  .calender-details .rbc-time-header .rbc-time-header-content {
+    border-left: none;
+    background-color: #D3D3D3;
+    margin-bottom: 25px;
+    border-radius: 25px;
+  }
+  .calender-details .rbc-time-header.rbc-overflowing {
+    border: none;
+  }
+  .calender-details .rbc-header + .rbc-header {
+    border: none;
+  }
+  .calender-details .rbc-time-view .rbc-row {
+    min-height: 40px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  
+  .calender-details .rbc-header.rbc-today,
+  .calender-details .rbc-header {
+    background-color: transparent;
+    border: none;
+  }
+  .calender-details .rbc-header.rbc-today .d-flex {
+    border-radius: 50px;
+    background-color: white;
+    padding: 6px;
+  }
+  .calender-details .rbc-time-content > * + * > * {
+    border-left: none;
+  }
+  .calender-details .rbc-day-slot .rbc-time-slot {
+    border-top: 1px dotted #b7b7b7;
+  }
+  .calender-details .rbc-time-gutter.rbc-time-column .rbc-timeslot-group {
+    border: none;
+  }
+  .calender-details .rbc-today {
+    background-color: transparent;
+  }
+  .calender-details .rbc-timeslot-group {
+    min-height: 80px;
+  }
+  /*STYLE ALLDAYS*/
+  
+  .calender-details .rbc-allday-cell {
+    display: none;
+  }
+  
+  .square .filter-calender select {
+    width: 250px;
+    border-radius: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    outline: none;
+  }
+  .square .filter-calender span {
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .square.calender-screen {
+    overflow-x: hidden;
+  }
+
+  .calendar-nav-button {
+      background-color: #D3D3D3;
+      width: 24px;
+      height: 24px;
+  }
+
+
+  /* button add event calendar */
+  .container-button-eventoCalendar {
+    position: absolute; 
+    margin-left: 0px
+  }
+
+  .rbc-today{
+    background-color: inherit;
+  }
+  .rbc-current{
+    color: red;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50px;
+  }
+
+  @media screen and (min-width: 1200px) { 
+    .container-button-eventoCalendar {
+      
+      margin-left: 80px
+    }
+
+   }

@@ -1,0 +1,147 @@
+[
+  {
+    "ID_VENTAS_ACCESO": 23,
+    "NOMBRE": "VENTAS",
+
+    "NIVEL_SUPERIOR": 0,
+    "NUMERO_ORDEN": 1,
+    "LINK": null,
+    "lista": [],
+    "SUBNIVEL": [
+      {
+        "ID_VENTAS_ACCESO": 28,
+        "NOMBRE": "SUCURSALES",
+
+        "NIVEL_SUPERIOR": 23,
+        "NUMERO_ORDEN": null,
+        "SUBNIVEL": [
+          { "nameL": "Sucursal Pando", "value": "activo" },
+          { "nameL": "Sucursal Salamanca", "value": "activo" },
+          { "nameL": "Sucursal América Oeste", "value": "activo" },
+          { "nameL": "Sucursal Hupermall", "value": "inctivo" }
+        ],
+        "LINK": null
+      },
+      {
+        "ID_VENTAS_ACCESO": 30,
+        "NOMBRE": "C. INTERNOS",
+        "tengolista": false,
+        "NIVEL_SUPERIOR": 23,
+        "NUMERO_ORDEN": null,
+        "lista": [],
+        "LINK": null,
+        "SUBNIVEL": []
+      }
+    ]
+  },
+  {
+    "ID_VENTAS_ACCESO": 23,
+    "NOMBRE": "PEDIDOS",
+
+    "NIVEL_SUPERIOR": 0,
+    "NUMERO_ORDEN": 1,
+    "LINK": null,
+    "lista": [
+      { "nameL": "Pedidos extraordinarios", "value": "activo" },
+      { "nameL": "Pedidos Externos", "value": "activo" },
+      { "nameL": "Permisos email", "value": "activo" }
+    ],
+    "SUBNIVEL": [
+      {
+        "ID_VENTAS_ACCESO": 28,
+        "NOMBRE": "Planta",
+
+        "NIVEL_SUPERIOR": 23,
+        "NUMERO_ORDEN": null,
+        "lista": [
+          { "nameL": "Pedidos consolidados", "value": "activo" },
+          { "nameL": "Despacho", "value": "activo" },
+          { "nameL": "Cronograma Entrega", "value": "activo" }
+        ],
+        "LINK": null,
+        "SUBNIVEL": []
+      },
+      {
+        "ID_VENTAS_ACCESO": 30,
+        "NOMBRE": "Sucursal Prueba",
+
+        "NIVEL_SUPERIOR": 23,
+        "NUMERO_ORDEN": null,
+
+        "lista": [
+          { "nameL": "Inventario de Cierre", "value": "activo" },
+          { "nameL": "Solicitudes", "value": "activo" },
+          { "nameL": "Revision Pedido", "value": "activo" },
+          { "nameL": "Recepción", "value": "activo" },
+          { "nameL": "Entregas", "value": "activo" }
+        ],
+        "LINK": null,
+        "SUBNIVEL": []
+      }
+    ]
+  },
+  {
+    "ID_VENTAS_ACCESO": 23,
+    "NOMBRE": "REPORTES",
+
+    "NIVEL_SUPERIOR": 0,
+    "NUMERO_ORDEN": 1,
+    "LINK": null,
+    "lista": [],
+    "SUBNIVEL": [
+      {
+        "ID_VENTAS_ACCESO": 28,
+        "NOMBRE": "SUCURSALES",
+
+        "NIVEL_SUPERIOR": 23,
+        "NUMERO_ORDEN": null,
+        "lista": [],
+        "LINK": null,
+        "SUBNIVEL": [
+          {
+            "ID_VENTAS_ACCESO": 28,
+            "NOMBRE": "Sucursal Salamanca",
+
+            "NIVEL_SUPERIOR": 23,
+            "NUMERO_ORDEN": null,
+            "lista": [
+              { "nameL": "Reporte A", "value": "activo" },
+              { "nameL": "Reporte B", "value": "activo" },
+              { "nameL": "Reporte D", "value": "inctivo" }
+            ],
+            "LINK": null,
+            "SUBNIVEL": []
+          },
+          {
+            "ID_VENTAS_ACCESO": 28,
+            "NOMBRE": "Sucursal Pando",
+
+            "NIVEL_SUPERIOR": 23,
+            "NUMERO_ORDEN": null,
+            "lista": [
+              { "nameL": "Reporte A", "value": "activo" },
+              { "nameL": "Reporte B", "value": "activo" },
+              { "nameL": "Reporte D", "value": "inctivo" }
+            ],
+            "LINK": null,
+            "SUBNIVEL": []
+          }
+        ]
+      },
+      {
+        "ID_VENTAS_ACCESO": 28,
+        "NOMBRE": "Reportes",
+
+        "NIVEL_SUPERIOR": 23,
+        "NUMERO_ORDEN": null,
+        "lista": [
+          { "nameL": "REPORTES 01", "value": "activo" },
+          { "nameL": "REPORTES 02", "value": "activo" },
+          { "nameL": "REPORTES 03", "value": "inctivo" }
+        ],
+        "LINK": null,
+        "SUBNIVEL": []
+      }
+    ]
+  }
+]

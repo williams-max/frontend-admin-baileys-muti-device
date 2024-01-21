@@ -1,0 +1,29 @@
+#body-pd-login {
+    background-color: #EFEFEF !important;
+    margin-top: -70px;
+    margin-left: -85px;
+}
+
+.mt-45 {
+    margin-top: 45px;
+}
+
+.center-content {
+    position: relative;
+}
+
+.center-content-child {
+    position: absolute;
+    top: 5%;
+    height: 30%;
+    width: 100%;
+    margin: -15% 0 0 -25%;
+}
+
+@media screen and (max-width: 768px) {
+    #body-pd-login {
+        background-color: #EFEFEF !important;
+        margin-top: -50px !important;
+        margin-left: -2px !important;
+    }
+}

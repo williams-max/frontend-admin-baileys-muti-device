@@ -1,0 +1,14 @@
+.navtab-button {
+    background-color: #D3D3D3 !important;
+    border-radius: 14px 14px 0px 0 !important;
+    border: 1px solid #9C9C9C;
+    width: 146px;
+}
+
+.navtab-button:hover {
+    border: 1px solid #9C9C9C;
+}
+
+.navtab-button-active {
+    background-color: #F8F9FA !important;
+}

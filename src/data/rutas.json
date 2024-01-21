@@ -1,0 +1,26 @@
+[
+  {
+    "status": "true",
+    "name":""
+  },
+  {
+    "status": "true",
+    "name":"existencia-prueba"
+  },
+  {
+    "status": "true",
+    "name":"solicitud-prueba"
+  },
+  {
+    "status": "true",
+    "name":"apv-prueba"
+  },
+  {
+    "status": "true",
+    "name":"receta-combo"
+  },
+  {
+    "status": "true",
+    "name":"crear-receta"
+  }
+]
