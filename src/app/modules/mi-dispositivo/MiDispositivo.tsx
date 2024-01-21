@@ -21,7 +21,6 @@ const MiDispositivo = () => {
     loadInstancias();
   }
   useEffect(() => {
-    // Update the document title using the browser API
     loadInstancias();
   }, [controlReload]);
 

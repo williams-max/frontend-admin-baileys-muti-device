@@ -1,5 +1,4 @@
 
-//import RecetaCombo from '../../app/modules/receta/RecetaCombo';
 import MiDispositivo from '../../app/modules/mi-dispositivo/MiDispositivo';
 
 import {  styled} from '@mui/material';

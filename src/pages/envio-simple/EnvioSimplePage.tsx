@@ -1,5 +1,4 @@
 
-//import RecetaCombo from '../../app/modules/receta/RecetaCombo';
 import EnvioSimple from '../../app/modules/envio-simple/EnvioSimple';
 
 import {  styled} from '@mui/material';

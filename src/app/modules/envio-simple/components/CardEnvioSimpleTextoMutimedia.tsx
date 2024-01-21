@@ -1,11 +1,9 @@
-import { Typography, Button, TextField, Grid, Modal, Autocomplete, FormGroup, Checkbox } from '@mui/material'
+import { Button, TextField, Grid, Autocomplete } from '@mui/material'
 import React, { useState, useEffect } from 'react'
 import Box from '@mui/material/Box';
 import { Controller, useForm } from "react-hook-form";
 import { AlertSave } from '../../../common/alerts/alerts';
 import { useEnvioSimple } from '../services/useEnvioSimple';
-
-
 import axios from 'axios';
 
 import ConfigSwisse from '../../../../core/api/ConfigSwisse';
@@ -14,16 +12,12 @@ import { hasFlag } from "country-flag-icons";
 import { countries } from "countries-list";
 import Flags from "country-flag-icons/react/3x2";
 
-
-
-
 const CardEnvioSimpleTextoMutimedia = () => {
-
 
   const urlApiWhatsapp = ConfigSwisse.urlApiWhatsapp;
   const { loadApiListInstances } = useEnvioSimple();
 
-  const { formState, handleSubmit, control, register, getValues, setValue, unregister, reset } = useForm();
+  const { formState, handleSubmit, control } = useForm();
 
   const { errors } = formState
   const [listActivos, setListActivos] = useState<any>([])

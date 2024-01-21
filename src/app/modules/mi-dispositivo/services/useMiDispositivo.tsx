@@ -1,7 +1,5 @@
 
 import AplicationConnect from "../../../../core/api/AplicationConnect"
-
-
 export const useMiDispositivo = () => {
   
     const loadApiCreateInstance = async (nombre_instancia: string) => {
