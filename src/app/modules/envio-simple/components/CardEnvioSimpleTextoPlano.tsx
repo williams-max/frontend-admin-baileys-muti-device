@@ -36,7 +36,7 @@ const CardEnvioSimpleTextoPlano = () => {
   const { errors } = formState
   const [listActivos, setListActivos] = useState<any>([])
   const [paisSelecionado, setPaisSelecionado] = useState<any>('');
-  const [hiddenContacto, setHiddenContacto] = useState(false)
+  const [hiddengrupo, setHiddengrupo] = useState(false)
   const [ListaGrupos, setListaGrupos] = useState<any>([]);
   const [idSeleccionado, setIdSelecionado] = useState<any>('')
 
@@ -168,19 +168,20 @@ const CardEnvioSimpleTextoPlano = () => {
   }
 
   const enviarMensajeTexto = async (dataForm: any) => {
-    const { check_contacto, contacto } = dataForm;
+    const { check_grupo, grupo } = dataForm;
+    console.log("data ",dataForm)
 
-    if (!paisSelecionado.code && (check_contacto == false || check_contacto == undefined)) {
+    if (!paisSelecionado.code && (check_grupo == false || check_grupo == undefined)) {
       return;
     }
 
     var temp_numero_phone = `${paisSelecionado.code}${dataForm.numero}`;
-    if (check_contacto) {
-      temp_numero_phone = contacto?.numero_contacto
+    if (check_grupo) {
+      temp_numero_phone = grupo?.numero_grupo
     }
     try {
 
-      if (check_contacto == false) {
+      if (check_grupo == false || check_grupo == undefined) {
 
         const responseMessageText = await loadApiEnviarMensajeSimple(dataForm.nombre_instancia.instance_key
           , temp_numero_phone, dataForm.mensaje
@@ -195,11 +196,14 @@ const CardEnvioSimpleTextoPlano = () => {
         const responseMessage = await loadApiSendMessage(dataForm.nombre_instancia.instance_key
           , idSeleccionado, dataForm.mensaje
         );
+        if (responseMessage?.error == false) {
+          AlertSave({ title: "", message: "Enviado Correctamente" });
+        }
 
       }
 
     } catch (error) {
-
+  console.log("error----------> ",error)
     }
 
   }
@@ -225,7 +229,6 @@ const CardEnvioSimpleTextoPlano = () => {
             />
             &nbsp;
             <span>{`${code[1].name} ${code[1].phone}`}</span>
-            {/*<span>{`${code[0]} ${code[1].name} ${code[1].phone}`}</span> */}
           </>
         )
       };
@@ -238,8 +241,8 @@ const CardEnvioSimpleTextoPlano = () => {
 
 
   const hadleChangeCheked = async (estado: boolean) => {
-    setHiddenContacto(!!estado);
-    setValue(`check_contacto`, !!estado)
+    setHiddengrupo(!!estado);
+    setValue(`check_grupo`, !!estado)
   }
   return (
     <div>
@@ -300,7 +303,7 @@ const CardEnvioSimpleTextoPlano = () => {
                   <FormGroup sx={{ display: 'flex', flexDirection: 'row' }}>
 
                     <Controller
-                      name={`check_contacto`}
+                      name={`check_grupo`}
                       control={control}
                       render={({ field: props }: any) => (
                         <Checkbox
@@ -318,15 +321,15 @@ const CardEnvioSimpleTextoPlano = () => {
               </Grid>
               <Grid item xs={12} sm={12} md={6}>
 
-                {hiddenContacto ?
+                {hiddengrupo ?
                   <div style={{ width: '100%' }}>
                     <div style={{ display: 'flex', flexDirection: 'row' }}>
-                      <h6 style={{ padding: '0px', margin: '0px', fontSize: '12px' }}>Seleccione contacto</h6>
+                      <h6 style={{ padding: '0px', margin: '0px', fontSize: '12px' }}>Seleccione grupo</h6>
 
                     </div>
                     <Controller
                       control={control}
-                      name="contacto"
+                      name="grupo"
                       rules={{ required: true }}
                       render={({ field: { onChange, value } }) => (
                         <Autocomplete
@@ -346,9 +349,9 @@ const CardEnvioSimpleTextoPlano = () => {
                             <TextField
                               {...params}
                               size="small"
-                              label="Seleccione contacto"
-                              error={!!errors.contacto}
-                              helperText={errors.contacto && "Completa este campo"}
+                              label="Seleccione grupo"
+                              error={!!errors.grupo}
+                              helperText={errors.grupo && "Completa este campo"}
                             />
                           )}
                           getOptionLabel={(option: any) => option.subject}
@@ -358,7 +361,7 @@ const CardEnvioSimpleTextoPlano = () => {
                   </div> : null
                 }
                 {
-                  hiddenContacto == false ?
+                  hiddengrupo == false ?
                     <>
 
                       <h6 style={{ padding: '0px', margin: '0px', fontSize: '12px' }}>Seleccione Pais</h6>

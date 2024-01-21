@@ -56,7 +56,6 @@ const CardEnvioSimpleTextoMutimedia = () => {
             />
             &nbsp;
             <span>{`${code[1].name} ${code[1].phone}`}</span>
-            {/*<span>{`${code[0]} ${code[1].name} ${code[1].phone}`}</span> */}
           </>
         )
       };

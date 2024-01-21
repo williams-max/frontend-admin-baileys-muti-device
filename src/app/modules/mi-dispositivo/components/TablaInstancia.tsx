@@ -111,11 +111,15 @@ function descendingComparator(a: any, b: any, orderBy: any) {
 
 function getComparator(order: any, orderBy: any) {
   // console.log("order orderBy", order, orderBy)
-  return order === 'asc'
+  return order === 'desc'
     ? (a: any, b: any) => descendingComparator(a, b, orderBy)
     : (a: any, b: any) => -descendingComparator(a, b, orderBy);
 }
 
+// Since 2020 all major browsers ensure sort stability with Array.prototype.sort().
+// stableSort() brings sort stability to non-modern browsers (notably IE11). If you
+// only support modern browsers you can replace stableSort(exampleArray, exampleComparator)
+// with exampleArray.slice().sort(exampleComparator)
 function stableSort(array: any, comparator: any) {
 
   //console.log("step 3 ", array, comparator)
@@ -134,7 +138,7 @@ function stableSort(array: any, comparator: any) {
 //const DEFAULT_ORDER = 'asc';
 const DEFAULT_ORDER = 'desc';
 //const rows = 'calories';
-const DEFAULT_ORDER_BY = 'ID_USUARIO';
+const DEFAULT_ORDER_BY = 'instance_key';
 const DEFAULT_ROWS_PER_PAGE = 5;
 
 const EnhancedTableHead = (props: any) => {
@@ -162,13 +166,13 @@ const EnhancedTableHead = (props: any) => {
           }}
           align="left"
         >
-          Nombre instancia
+          instancia
           <TableSortLabel
-            active={orderBy === "ID_USUARIO"}
-            direction={orderBy === "ID_USUARIO" ? order : 'asc'}
-            onClick={createSortHandler("ID_USUARIO")}
+            active={orderBy === "instance_key"}
+            direction={orderBy === "instance_key" ? order : 'asc'}
+            onClick={createSortHandler("instance_key")}
           >
-            {orderBy === "ID_USUARIO" ? (
+            {orderBy === "instance_key" ? (
               <Box component="span" sx={visuallyHidden}>
                 {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
               </Box>
@@ -179,12 +183,12 @@ const EnhancedTableHead = (props: any) => {
         <TableCell sx={{ ...tableStyling, width: '3%', minWidth: '60px', borderLeft: "1px solid white", wordBreak: 'normal' }} align="left">
           Conectado ?
           <TableSortLabel
-            active={orderBy === "NOMBRE"}
-            direction={orderBy === "NOMBRE" ? order : 'asc'}
-            onClick={createSortHandler("NOMBRE")}
+            active={orderBy === "phone_connected"}
+            direction={orderBy === "phone_connected" ? order : 'asc'}
+            onClick={createSortHandler("phone_connected")}
           >
 
-            {orderBy === "NOMBRE" ? (
+            {orderBy === "phone_connected" ? (
               <Box component="span" sx={visuallyHidden}>
                 {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
               </Box>
@@ -196,12 +200,11 @@ const EnhancedTableHead = (props: any) => {
         <TableCell sx={{ ...tableStyling, width: '3%', minWidth: '60px', borderLeft: "1px solid white", wordBreak: 'normal' }} align="left">
           User id
           <TableSortLabel
-            active={orderBy === "NOMBRE"}
-            direction={orderBy === "NOMBRE" ? order : 'asc'}
-            onClick={createSortHandler("NOMBRE")}
+            active={orderBy === "phone_connectedx"}
+            direction={orderBy === "phone_connectedx" ? order : 'asc'}
+            onClick={createSortHandler("phone_connectedx")}
           >
-            {/*headCell.label*/}
-            {orderBy === "NOMBRE" ? (
+            {orderBy === "phone_connectedx" ? (
               <Box component="span" sx={visuallyHidden}>
                 {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
               </Box>
@@ -227,7 +230,7 @@ EnhancedTableHead.propTypes = {
 
 
 
-export default function TablaContacto(props: any) {
+export default function TablaInstancia(props: any) {
 
   const { loadApiDeleteInstance } = useMiDispositivo();
   const { tableData,
@@ -239,12 +242,13 @@ export default function TablaContacto(props: any) {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(DEFAULT_ROWS_PER_PAGE);
   const [rows, setRows] = React.useState([]);
+
   React.useEffect(() => {
     if (tableData) setRows(tableData);
   }, [tableData]);
 
   const handleRequestSort = (event: any, property: any) => {
-    const isAsc = orderBy === property && order === "desc";
+    const isAsc = orderBy === property && order === "asc";
     setOrder(isAsc ? "desc" : "asc");
     setOrderBy(property);
   };
@@ -290,7 +294,6 @@ export default function TablaContacto(props: any) {
       handleChangeControlReload();
 
     }
-
 
   }
 
